@@ -19,6 +19,29 @@ Hero.prototype = {
     else{ this.health += food.replenishment;}
   },
 
+  completeTask: function(task) {
+    task.complete();
+  },
+
+  finishedTasks: function() {
+
+    filteredArray = this.tasks.filter(function(task) {
+      return task.completed === true;
+    });
+
+    return filteredArray;
+  },
+
+  unfinishedTasks: function() {
+
+    filteredArray = this.tasks.filter(function(task) {
+      return task.completed === false;
+    });
+
+    return filteredArray;
+  },
+
+ 
   sortTasks: function(sortValue) {
     switch(sortValue) {
         case "difficulty":

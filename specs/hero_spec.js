@@ -65,6 +65,16 @@ describe("Hero", function() {
   it("can sort tasks by reward", function() {
     hero2.sortTasks("reward");
     assert.deepStrictEqual(hero2.tasks, [task3, task2, task1])
+  }),
+
+  it("can view completed tasks", function() {
+    hero1.completeTask(task1);
+    assert.deepStrictEqual(hero1.finishedTasks(), [task1]);
+  }),
+
+  it("can view incomplete tasks", function() {
+    hero1.completeTask(task1);
+    assert.deepStrictEqual(hero1.unfinishedTasks(), [task2]);
   })
 
 })
