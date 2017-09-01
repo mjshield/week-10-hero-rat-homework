@@ -13,7 +13,6 @@ describe("Hero", function() {
     task1 = new Task("Finish eating pizza", 1, 3, 5);
     task2 = new Task("Defeat Snake and his brother Ladders", 3, 3, 180);
     hero1 = new Hero("Brave Guy", 100, "Turkey", [task1, task2]);
-
   }),
 
   it("has a name", function() {
@@ -35,9 +34,5 @@ describe("Hero", function() {
   it("has a task list", function() {
     assert.deepStrictEqual(hero1.tasks, [task1, task2]);
   })
-
-
-
-
 
 })
